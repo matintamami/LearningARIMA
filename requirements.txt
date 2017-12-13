@@ -7,6 +7,7 @@ pandas==0.21.0
 patsy==0.4.1
 post==0.0.22
 public==0.0.53
+pyodbc==4.0.21
 pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2017.3
@@ -16,4 +17,5 @@ scikit-learn==0.19.1
 scipy==1.0.0
 six==1.11.0
 sklearn==0.0
+SQLAlchemy==1.1.15
 statsmodels==0.8.0
