@@ -14,5 +14,13 @@ db.connect()
 
 #load Data From sql Server
 data = db.execute("SELECT TRANSACTION_DATETIME, PRODUCT, SUM(QUANTITY) AS qty FROM query_forecase GROUP BY PRODUCT,TRANSACTION_DATETIME")
-for my_data in data:
-    print my_data
+df = DataFrame(data.fetchall(),dtype=float)
+df[0] = pd.to_datetime(df[0],format='%y-%m-%d')
+indexed_df = df.set_index(0)
+ts = indexed_df[2]
+# plt.plot(ts.index.to_pydatetime(), ts.values)
+
+#Resample to Week Data
+# ts_week = ts.resample('M').mean()
+# print ts
+# print ts_week

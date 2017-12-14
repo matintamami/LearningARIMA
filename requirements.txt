@@ -18,4 +18,3 @@ scipy==1.0.0
 six==1.11.0
 sklearn==0.0
 SQLAlchemy==1.1.15
-statsmodels==0.8.0

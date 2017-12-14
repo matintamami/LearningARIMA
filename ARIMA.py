@@ -12,11 +12,13 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 import matplotlib.pylab as plt
 from matplotlib.pylab import rcParams
 from sklearn.metrics import mean_squared_error
+
 #load Data
-df_fx_data = read_csv('E:/Matin/Work Programming/Learn ARIMA/BOE-XUDLERD.csv')
+df_fx_data = read_csv('E:/Matin/Work Programming/Practice/Learn ARIMA/BOE-XUDLERD.csv')
 print type(df_fx_data)
 df_fx_data['Date'] = pd.to_datetime(df_fx_data['Date'], format='%Y-%m-%d')
 indexed_df = df_fx_data.set_index('Date')
+print indexed_df
 ts = indexed_df['Value']
 # plt.plot(ts.index.to_pydatetime(), ts.values)
 
